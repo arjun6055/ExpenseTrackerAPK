@@ -1,3 +1,28 @@
 plugins {
-    id 'com.android.application' version '9.4.0' apply false
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.expenseanalyzer.app'
+    compileSdk 37
+
+    defaultConfig {
+        applicationId 'com.expenseanalyzer.app'
+        minSdk 28
+        targetSdk 35
+        versionCode 1
+        versionName '2.5.2'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.15.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.biometric:biometric:1.1.0'
 }
