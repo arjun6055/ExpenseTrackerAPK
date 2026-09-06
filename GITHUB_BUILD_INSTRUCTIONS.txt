@@ -1,0 +1,19 @@
+MY EXPENSE ANALYZER V2.5.2 - GITHUB APK BUILD
+
+This package is prepared to build the APK on GitHub Actions instead of using the
+local Android Studio/Gradle environment.
+
+1. Create a new GitHub repository (for example: ExpenseTrackerAndroid).
+2. Upload ALL files/folders from this package to the repository root.
+3. Commit to the main branch.
+4. Open the repository's Actions tab.
+5. Select "Build My Expense Analyzer APK".
+6. Click "Run workflow" if it has not already run from the push.
+7. When the run finishes successfully, open the completed run.
+8. Under Artifacts, download:
+   My-Expense-Analyzer-v2.5.2-debug
+9. Inside the downloaded artifact is app-debug.apk.
+
+The workflow intentionally does NOT require gradlew/gradlew.bat. It installs and
+uses Gradle 9.7.1 directly on the GitHub runner, with Java 17, so the local
+Windows Gradle-daemon problem is bypassed.
